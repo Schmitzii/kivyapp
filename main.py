@@ -1,28 +1,24 @@
-#:kivy
-
 from kivymd.app import MDApp
 from kivymd.uix.screen import Screen
 from kivymd.uix.button import MDRectangleFlatButton, MDFlatButton
 from kivymd.uix.dialog import MDDialog
 from kivy.lang import Builder
 
-
 class DemoApp(MDApp):
 
-    username_helper="""
-    MDTextField:
-        hint_text: "Enter username"
-        helper_text: "forgot username"
-        helper_text_mode: "on_focus"
-        icon_right: "account"
-        icon_right_color: app.theme_cls.primary_color
-        pos_hint: {"center_x": 0.5, "center_y": 0.5}
-        size_hint_x: None
-        width: 300
-
-    """
-    
     def build(self):
+        username_helper="""
+MDTextField:
+    hint_text: "Enter username"
+    helper_text: "forgot username"
+    helper_text_mode: "on_focus"
+    icon_right: "account"
+    icon_right_color: app.theme_cls.primary_color
+    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    size_hint_x: None
+    width: 300
+"""
+
         self.theme_cls.primary_palette = "LightBlue"
         self.theme_cls.primary_hue = "700"
         self.theme_cls.theme_style = "Light"
